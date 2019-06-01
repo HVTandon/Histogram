@@ -29,4 +29,4 @@ def hist(path, bins=10):
     #lists,bins=np.histogram(lidar_dem_hist,bins)
     #print(lists, "-------------", bins)
 
-hist('index.tif')
+hist('DSM.tif')
