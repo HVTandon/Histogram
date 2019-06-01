@@ -4,10 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def hist(path, bins=10):
-    steps=[]
     # Open data and assign negative values to nan
     with rio.open(path) as src:
-        lidar_dem_im = src.read(1)#, window=Window(600, 1000, 500, 2500))
+        lidar_dem_im = src.read(1)#, window=Window(600, 1000, 5000, 2500))
         print(lidar_dem_im.dtype)
         lidar_dem_hist = lidar_dem_im.ravel()
         l= len(lidar_dem_hist)
@@ -20,7 +19,7 @@ def hist(path, bins=10):
     
     #lidar_dem_hist = lidar_dem_hist[check]
 
-    print(plt.hist(lidar_dem_hist))
+    print(plt.hist(lidar_dem_hist, bins))
     #mini=min(lidar_dem_hist)
     #maxi=max(lidar_dem_hist)
     #for i in range(bins+1):
