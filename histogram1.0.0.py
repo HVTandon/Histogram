@@ -30,4 +30,4 @@ def hist(path, bins=10):
     #lists,bins=np.histogram(lidar_dem_hist,bins)
     #print(lists, "-------------", bins)
 
-hist('s3://indshine-test/histogram/index.tif')
+hist('index.tif')
