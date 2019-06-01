@@ -12,8 +12,7 @@ def hist(path, bins=10):
         lidar_dem_hist = lidar_dem_im.ravel()
         l= len(lidar_dem_hist)
         print(l)
-        if lidar_dem_hist[lidar_dem_hist<0]:
-            lidar_dem_hist=lidar_dem_hist[False]
+        lidar_dem_hist=lidar_dem_hist[lidar_dem_hist>=0]
     print(lidar_dem_im.shape)
     
     # The .ravel method turns an 2-D numpy array into a 1-D vector
